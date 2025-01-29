@@ -2,6 +2,7 @@
 //shebang line to make the file executable
 import fs from 'fs';
 import path from 'path';
+import Chalk from 'chalk';
 
 
 if (process.argv.length < 3) {
