@@ -90,7 +90,7 @@ code-analyzer ./src/index.js --verbose --export-csv
 Clone the repository:
 
 ```bash
-git clone https://github.com/your-username/code-analyzer.git
+git clone https://github.com/elyashium/CLI-code_analyser
 ```
 
 Navigate to the project directory:
@@ -147,9 +147,7 @@ Contributions are welcome! Please follow these steps:
 ## Dependencies
 
 - **chalk**: For colorful console output.
-- **cli-table**: For formatted tables.
-- **figlet**: For ASCII art banners.
-- **ora**: For loading spinners.
+
 
 ## License
 
@@ -158,7 +156,7 @@ This project is licensed under the MIT License. See the LICENSE file for details
 ## Author
 
 Your Name  
-[GitHub](https://github.com/your-username) | Email
+[GitHub](https://github.com/elyashium) | Email
 
 ## Support
 
