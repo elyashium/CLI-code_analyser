@@ -1,6 +1,7 @@
 import { readFile } from "node:fs/promises";
 
 const filePath = process.argv[2];
+const fileContent = process.argv[3];
 
 const fileContent = await readFile(filePath, "utf-8");
 
