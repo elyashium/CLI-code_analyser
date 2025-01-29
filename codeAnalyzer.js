@@ -2,7 +2,7 @@
 //shebang line to make the file executable
 import fs from 'fs';
 import path from 'path';
-import Chalk from 'chalk';
+import chalk from 'chalk';
 
 
 
@@ -22,7 +22,7 @@ try {
   process.exit(1);
 }
 
-const startTime = new Date().now();
+const startTime = Date.now();
 
 const analysisResults = {
   filePath,
@@ -36,7 +36,7 @@ const analysisResults = {
   commentCount: fileContent.match(/\/\/.*|\/\*[\s\S]*?\*\//g)?.length || 0, //regex to match single line and multi line comments
   complexity: calculateComplexity(fileContent),
 };
-const endTime = new Date().now();
+const endTime = Date.now();
 
 
 console.log(chalk.bold.blue(`Analysis completed in ${(endTime - startTime) / 1000} seconds`));

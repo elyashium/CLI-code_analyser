@@ -1,0 +1,22 @@
+{
+  "filePath": "file-1.txt",
+  "fileType": ".txt",
+  "lineCount": 3,
+  "nonEmptyLineCount": 2,
+  "wordCount": 125,
+  "charCount": 841,
+  "keywordFrequency": {
+    "if": 0,
+    "else": 0,
+    "for": 3,
+    "while": 0,
+    "function": 0,
+    "return": 0,
+    "const": 0,
+    "let": 0,
+    "var": 0
+  },
+  "functions": [],
+  "commentCount": 0,
+  "complexity": 0
+}
