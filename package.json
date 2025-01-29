@@ -1,5 +1,6 @@
 {
-    "name": "code-analyzer",
+    "type": "module",
+    "name": "code-analyzerx",
     "version": "1.0.0",
     "description": "A tool to analyze code files and provide statistics like line count, word count, and complexity.",
     "main": "lib/analyzer.js",
@@ -16,4 +17,4 @@
     "dependencies": {
       "chalk": "^5.0.0"
     }
-  }
+}
