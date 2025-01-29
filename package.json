@@ -1,6 +1,19 @@
 {
-    "type": "module",
+    "name": "code-analyzer",
+    "version": "1.0.0",
+    "description": "A tool to analyze code files and provide statistics like line count, word count, and complexity.",
+    "main": "lib/analyzer.js",
+    "bin": {
+      "code-analyzer": "./bin/codeAnalyzer.js"
+    },
+    "scripts": {
+      "start": "node bin/codeAnalyzer.js",
+      "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "keywords": ["code analysis", "code metrics", "complexity", "JavaScript"],
+    "author": "Ashish <ashishsinghlogic@gmail.com>",
+    "license": "MIT",
     "dependencies": {
-        "chalk": "^5.4.1"
+      "chalk": "^5.0.0"
     }
-}
+  }
