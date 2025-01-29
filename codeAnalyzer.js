@@ -35,18 +35,18 @@ const analysisResults = {
 };
 
 
-console.log('Code Analysis Results:');
-console.log('----------------------');
-console.log(`File Path: ${analysisResults.filePath}`);
-console.log(`File Type: ${analysisResults.fileType}`);
-console.log(`Total Lines: ${analysisResults.lineCount}`);
-console.log(`Non-Empty Lines: ${analysisResults.nonEmptyLineCount}`);
-console.log(`Total Words: ${analysisResults.wordCount}`);
-console.log(`Total Characters: ${analysisResults.charCount}`);
-console.log(`Comment Count: ${analysisResults.commentCount}`);
-console.log(`Code Complexity (Conditionals/Loops): ${analysisResults.complexity}`);
-console.log('Keyword Frequency:', analysisResults.keywordFrequency);
-console.log('Functions Detected:', analysisResults.functions);
+console.log(chalk.bold.blue('Code Analysis Results:'));
+console.log(chalk.green('----------------------'));
+console.log(chalk.yellow(`File Path: ${analysisResults.filePath}`));
+console.log(chalk.yellow(`File Type: ${analysisResults.fileType}`));
+console.log(chalk.yellow(`Total Lines: ${analysisResults.lineCount}`));
+console.log(chalk.yellow(`Non-Empty Lines: ${analysisResults.nonEmptyLineCount}`));
+console.log(chalk.yellow(`Total Words: ${analysisResults.wordCount}`));
+console.log(chalk.yellow(`Total Characters: ${analysisResults.charCount}`));
+console.log(chalk.yellow(`Comment Count: ${analysisResults.commentCount}`));
+console.log(chalk.yellow(`Code Complexity (Conditionals/Loops): ${analysisResults.complexity}`));
+console.log(chalk.yellow('Keyword Frequency:'), analysisResults.keywordFrequency);
+console.log(chalk.yellow('Functions Detected:'), analysisResults.functions);
 
 
 try {
