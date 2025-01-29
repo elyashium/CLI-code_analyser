@@ -5,6 +5,7 @@ import path from 'path';
 import Chalk from 'chalk';
 
 
+
 if (process.argv.length < 3) {
   console.log('Usage: node codeAnalyzer.js <file-path>');
   process.exit(1);
@@ -21,6 +22,8 @@ try {
   process.exit(1);
 }
 
+const startTime = new Date().now();
+
 const analysisResults = {
   filePath,
   fileType: path.extname(filePath).toLowerCase(),
@@ -33,9 +36,10 @@ const analysisResults = {
   commentCount: fileContent.match(/\/\/.*|\/\*[\s\S]*?\*\//g)?.length || 0, //regex to match single line and multi line comments
   complexity: calculateComplexity(fileContent),
 };
+const endTime = new Date().now();
 
 
-console.log(chalk.bold.blue('Code Analysis Results:'));
+console.log(chalk.bold.blue(`Analysis completed in ${(endTime - startTime) / 1000} seconds`));
 console.log(chalk.green('----------------------'));
 console.log(chalk.yellow(`File Path: ${analysisResults.filePath}`));
 console.log(chalk.yellow(`File Type: ${analysisResults.fileType}`));
