@@ -1,7 +1,7 @@
 import { readFile } from "node:fs/promises";
 
 const filePath = process.argv[2];
-const fileContent = process.argv[3];
+const wordSearch = process.argv[3];
 
 const fileContent = await readFile(filePath, "utf-8");
 
@@ -9,14 +9,37 @@ const wordsArray = fileContent.split(/[\W]/).filter((w) => w);
 //here /[\w]/ will match any word character (alphanumeric & underscore) 
 //and /[\W]/ will match any non-word character (special characters)
 //and filter((w) => w) will remove empty strings from the array
-const wordsCount = {};
 
-wordsArray.forEach((word) => {
-  if (word in wordsCount) {
-    wordsCount[word] += 1;
-  } else {
-    wordsCount[word] = 1;
-  }
-});
+if (process.argv.length <= 3) {
+  console.log("Please provide file path");
+  // process.exit(1);
 
-console.log(wordsCount);
+  const wordsCount = {};
+
+  wordsArray.forEach((word) => {
+    if (word in wordsCount) {
+      wordsCount[word] += 1;
+    } else {
+      wordsCount[word] = 1;
+    }
+  });
+
+  console.log(wordsCount);
+  process.exit(1);
+}
+
+if (process.argv.length <= 4) {
+  console.log("Please provide file path and word to search");
+
+  let wordCount =0;
+
+  wordsArray.forEach((word) => {
+    if (word.toLowerCase() === wordSearch.toLowerCase()) {
+      wordCount += 1;
+      console.log('Word found, the ${wordSearch} appears ${wordCount} times');
+      process.exit(1);
+
+    }
+  })
+}
+
