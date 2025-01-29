@@ -156,7 +156,7 @@ This project is licensed under the MIT License. See the LICENSE file for details
 ## Author
 
 Your Name  
-[GitHub](https://github.com/elyashium) | Email
+[GitHub](https://github.com/elyashium) 
 
 ## Support
 
