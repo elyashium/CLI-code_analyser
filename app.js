@@ -28,18 +28,22 @@ if (process.argv.length <= 3) {
   process.exit(1);
 }
 
+
+let wordCount = 0;
+
 if (process.argv.length <= 4) {
-  console.log("Please provide file path and word to search");
-
-  let wordCount =0;
-
   wordsArray.forEach((word) => {
     if (word.toLowerCase() === wordSearch.toLowerCase()) {
       wordCount += 1;
-      console.log('Word found, the ${wordSearch} appears ${wordCount} times');
-      process.exit(1);
-
     }
-  })
+    else {
+      console.log("Word not found");
+      process.exit(1);
+  }
+
+  console.log(`Word found, the ${wordSearch} appears ${wordCount} times`);
+  process.exit(1);
+})
 }
+
 
